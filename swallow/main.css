@@ -8,11 +8,11 @@
 }
 @font-face{
     font-family: MRegular;
-    src: url(/fonts/Montserrat-Regular.ttf); 
+    src: url(fonts/Montserrat-Regular.ttf); 
 }
 @font-face{
     font-family: MBold;
-    src: url(/fonts/Montserrat-Bold.ttf); 
+    src: url(fonts/Montserrat-Bold.ttf); 
 }
 *{
     margin: 0;
