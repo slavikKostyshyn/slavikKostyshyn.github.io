@@ -1,18 +1,18 @@
 @font-face{
     font-family: DancingScript-Regular;
-    src: url(../fonts/DancingScript-Regular.ttf); 
+    src: url(/fonts/DancingScript-Regular.ttf); 
 }
 @font-face{
     font-family: DancingScript-Bold;
-    src: url(../fonts/DancingScript-Bold.ttf); 
+    src: url(/fonts/DancingScript-Bold.ttf); 
 }
 @font-face{
     font-family: MRegular;
-    src: url(../fonts/Montserrat-Regular.ttf); 
+    src: url(/fonts/Montserrat-Regular.ttf); 
 }
 @font-face{
     font-family: MBold;
-    src: url(../fonts/Montserrat-Bold.ttf); 
+    src: url(/fonts/Montserrat-Bold.ttf); 
 }
 *{
     margin: 0;
