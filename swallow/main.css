@@ -258,7 +258,7 @@ header .nav-bar ul li a:hover::after{
 }
 
 .first-screen{
-    background-image: url(/img/hero.jpg);
+    background-image: url(../img/hero.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -351,7 +351,7 @@ header .nav-bar ul li a:hover::after{
 
 .midle-bg{
     margin-top: -50px;
-    background-image: url(/img/tasteful-recipes.jpg);
+    background-image: url(../img/tasteful-recipes.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -430,7 +430,7 @@ header .nav-bar ul li a:hover::after{
 
 .menu-bg{
     margin-top: -50px;
-    background-image: url(/img/menus.jpg);
+    background-image: url(../img/menus.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -464,7 +464,7 @@ header .nav-bar ul li a:hover::after{
     width: 422px;
     height: 404px;
     background-size: contain;
-    background-image: url(/img/salat.png);
+    background-image: url(../img/salat.png);
     background-repeat: no-repeat;
 }
 .menu::after{
@@ -478,7 +478,7 @@ header .nav-bar ul li a:hover::after{
     height: 424px;
     /* height: 42%; */
     background-size: contain;
-    background-image: url(/img/wine.png);
+    background-image: url(../img/wine.png);
     background-repeat: no-repeat;
 }
 .menu h2{
