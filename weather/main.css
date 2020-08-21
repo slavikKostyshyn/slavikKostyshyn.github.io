@@ -59,7 +59,7 @@ h2{
 }
 
 main{
-    background-image: url(/img/bg2.jpg);
+    background-image: url(img/bg2.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -146,10 +146,10 @@ main{
     background: rgba(0, 0, 0, 0.5);
 }
 .container-main .column.left .card{
-    background-image: url(/img/card.jpeg);
+    background-image: url(img/card.jpeg);
 }
 .container-main .column.right .card{
-    background-image: url(/img/card2.jpeg);
+    background-image: url(img/card2.jpeg);
 }
 .container-main .column .card .row{
     display: flex;
