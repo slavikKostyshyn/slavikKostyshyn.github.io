@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Game</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Icon -->
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+
+    <!-- Style -->
+    <link href="main.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->  
+    <!-- <bgsound src="sound.mp3" loop="1" balance="0" volume="0"/> -->
+</head>
+<body>
+    <div class="preloader">
+        <div class="block-pre">
+            <img src="img/icon.png">
+        </div>
+    </div>
+    <audio id="mySound" loop="loop" autoplay="autoplay">
+        <source src="sound_2.mp3" type="audio/ogg; codecs=vorbis">
+    </audio>
+    <main>
+        <div class="shadow">
+            <button id="controlVolume">
+                <img src="img/volume-up-solid.svg" alt="volue">
+            </button>
+            <div class="container-main">
+                <div class="column">
+                    <div class="img-block left">
+                        <img src="img/question.svg" alt="" id="myQuest">
+                        <img src="img/paper.svg" alt="" id="myPaper">
+                        <img src="img/scissors.svg" alt="" id="myScissor">
+                        <img src="img/rock.svg" alt="" id="myStone">
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="img-block right">
+                        <img src="img/question.svg" alt="" id="yourQuest">
+                        <img src="img/paper.svg" alt="" id="yourPaper">
+                        <img src="img/scissors.svg" alt="" id="yourScissor">
+                        <img src="img/rock.svg" alt="" id="yourStone">
+                    </div>
+                </div>
+            </div>
+            <div class="control-bar">
+                <div class="control">
+                    <label for="paper">
+                        <input type="radio" id="paper" name="controle">
+                        <img src="img/paper.svg" alt="">
+                    </label>
+                    <label for="scissors">
+                        <input type="radio" id="scissors" name="controle">
+                        <img src="img/scissors.svg" alt="">
+                    </label>
+                    <label for="stone">
+                        <input type="radio" id="stone" name="controle">
+                        <img src="img/rock.svg" alt="">
+                    </label>
+                </div>
+                <div class="btn-sect btn">
+                    <a id="clickBtn">play</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
