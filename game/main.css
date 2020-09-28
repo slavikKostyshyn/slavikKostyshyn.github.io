@@ -61,6 +61,9 @@ main .shadow{
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
 }
+/* main.active .shadow{
+    
+} */
 .container-main{
     display: flex;
     padding: 100px 0;
@@ -163,7 +166,7 @@ main .shadow{
     position: absolute;
     top: 20px;
     right: 20px;
-    background: #2a9d8f;
+    background: none;
     border: none;
     width: 40px;
     height: 40px;
@@ -171,4 +174,56 @@ main .shadow{
 }
 #controlVolume img{
     width: 20px;
+}
+
+#listBtn{
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: none;
+    border: none;
+    width: 30px;
+    height: 30px;
+    transition: 1s ease;
+}
+#listBtn path{
+    fill: #ffffff;
+    transition: .5s ease;
+}
+#listBtn:hover path{
+    fill: #e4e4e4;
+}
+#listBtn .btn-close{
+    display: none;
+}
+#listBody{
+    position: fixed;
+    left: 0; top: 0;
+    width: 40%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e4e4e4;
+    transition: 1s ease;
+    transform: translatex(-100%);
+    z-index: 9;
+}
+main.active #listBody{
+    transform: translatex(0%);
+}
+main.active #listBtn{
+    left: 41%;
+}
+#listBody .body{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+}
+#listBody .body .column .title{
+    margin-bottom: 20px;
+    color: #e76f51;
+    font-size: 20px;
 }

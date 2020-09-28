@@ -31,7 +31,13 @@ let myQuest = document.querySelector('#myQuest'),
     btnGame = document.querySelector('#clickBtn'),
     optionsPaper = document.querySelector('#paper'),
     optionsScissors = document.querySelector('#scissors'),
-    optionsStone = document.querySelector('#stone');
+    optionsStone = document.querySelector('#stone'),
+    myWin = document.querySelector('#myWin'),
+    myLose = document.querySelector('#myLose'),
+    myDraw = document.querySelector('#myDraw'),
+    yourWin = document.querySelector('#yourWin'),
+    yourLose = document.querySelector('#yourLose'),
+    yourDraw = document.querySelector('#yourDraw');
 
     optionsPaper.addEventListener('click', () => {
         document.querySelector('.column .img-block.left').style.transform = "rotateY(360deg)";
@@ -67,24 +73,28 @@ let myQuest = document.querySelector('#myQuest'),
         document.querySelector('.column .img-block.right').style.background = "#fff";
     });
 
-
-//  yourImgs = yourImgsAll.length - 1;
+var countMyWin = 1,
+    countMyLose = 1,
+    countMyDraw = 1,
+    countYourWin = 1,
+    countYourLose = 1,
+    countYourDraw = 1;
 
 btnGame.addEventListener("click", () => {
 
     var whatYourStep = 0;
-    whatYourStep = Math.floor(Math.random() * yourImgs.length);
+        whatYourStep = Math.floor(Math.random() * yourImgs.length);
 
     if(whatYourStep == 0){
         whatYourStep = Math.floor(Math.random() * yourImgs.length);
     }
 
-    let swapPromise = new Promise((resolve, reject) => {
+    let swapYourPromise = new Promise((resolve, reject) => {
         resolve(
             document.querySelector('.column .img-block.right').style.transform = "rotateY(360deg)"
         )  
-    }) 
-    swapPromise.then(() => {
+    });
+    swapYourPromise.then(() => {
         setTimeout(() => {
             document.querySelector('.column .img-block.right').style.transform = "rotateY(0deg)";
             document.querySelector('.column .img-block.right').style.background = "none";
@@ -104,24 +114,42 @@ btnGame.addEventListener("click", () => {
     }
 
     setTimeout(() =>{
-        if(optionsPaper.classList.contains('active')  && whatYourStep == 1){
-            alert('нічія');
-        }else if(optionsPaper.classList.contains('active')  && whatYourStep == 2){
-            alert('програш');
-        }else if(optionsPaper.classList.contains('active')  && whatYourStep == 3){
-            alert('перемога');
-        }else if(optionsScissors.classList.contains('active')  && whatYourStep == 1){
-            alert('перемога');
-        }else if(optionsScissors.classList.contains('active')  && whatYourStep == 2){
-            alert('нічія');
-        }else if(optionsScissors.classList.contains('active')  && whatYourStep == 3){
-            alert('програш');
-        }else if(optionsStone.classList.contains('active')  && whatYourStep == 1){
-            alert('програш');
-        }else if(optionsStone.classList.contains('active')  && whatYourStep == 2){
-            alert('перемога');
-        }else if(optionsStone.classList.contains('active')  && whatYourStep == 3){
-            alert('нічія');
+        if(optionsPaper.classList.contains('active') && whatYourStep == 1){
+            // alert('нічія');
+            myDraw.innerHTML = countMyDraw++;
+            yourDraw.innerHTML = countYourDraw++; 
+        }else if(optionsPaper.classList.contains('active') && whatYourStep == 2){
+            // alert('програш');
+            myLose.innerHTML = countMyLose++;
+            yourWin.innerHTML = countYourWin++;
+        }else if(optionsPaper.classList.contains('active') && whatYourStep == 3){
+            // alert('перемога');
+            myWin.innerHTML = countMyWin++;
+            yourLose.innerHTML = countYourLose++;
+        }else if(optionsScissors.classList.contains('active') && whatYourStep == 1){
+            // alert('перемога');
+            myWin.innerHTML = countMyWin++;
+            yourLose.innerHTML = countYourLose++;
+        }else if(optionsScissors.classList.contains('active') && whatYourStep == 2){
+            // alert('нічія');
+            myDraw.innerHTML = countMyDraw++;
+            yourDraw.innerHTML = countYourDraw++;  
+        }else if(optionsScissors.classList.contains('active') && whatYourStep == 3){
+            // alert('програш');
+            myLose.innerHTML = countMyLose++;
+            yourWin.innerHTML = countYourWin++;
+        }else if(optionsStone.classList.contains('active') && whatYourStep == 1){
+            // alert('програш');
+            myLose.innerHTML = countMyLose++;
+            yourWin.innerHTML = countYourWin++;
+        }else if(optionsStone.classList.contains('active') && whatYourStep == 2){
+            // alert('перемога');
+            myWin.innerHTML = countMyWin++;
+            yourLose.innerHTML = countYourLose++;
+        }else if(optionsStone.classList.contains('active') && whatYourStep == 3){
+            // alert('нічія');
+            myDraw.innerHTML = countMyDraw++;
+            yourDraw.innerHTML = countYourDraw++; 
         }
     }, 500);
 });
@@ -139,4 +167,19 @@ document.getElementById("controlVolume").onclick = function(){
         document.getElementById("mySound").pause();
         document.querySelector("#controlVolume img").setAttribute("src", "img/volume-mute-solid.svg");
     }
+}
+
+
+// score list sections ---------
+document.getElementById("listBtn").onclick = function(){
+    this.classList.toggle("active");
+
+    if(this.classList.contains('active')){
+        document.querySelector("#listBtn .btn-close").style.display = "block";
+        document.querySelector("#listBtn .btn-list").style.display = "none";
+    }else{
+        document.querySelector("#listBtn .btn-close").style.display = "none";
+        document.querySelector("#listBtn .btn-list").style.display = "block";
+    }
+    document.querySelector("main").classList.toggle("active");
 }

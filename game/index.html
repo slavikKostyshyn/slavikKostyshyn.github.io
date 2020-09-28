@@ -33,11 +33,35 @@
     <audio id="mySound" loop="loop" autoplay="autoplay">
         <source src="sound_2.mp3" type="audio/ogg; codecs=vorbis">
     </audio>
+
     <main>
         <div class="shadow">
+            
+            <div id="listBody">
+                <div class="body">
+                    <ul class="column">
+                        <li class="title">My Score</li>
+                        <li>Win: <span id="myWin"></span></li>
+                        <li>Lose: <span id="myLose"></span></li>
+                        <li>Draw: <span id="myDraw"></span></li>
+                    </ul>
+                    <ul class="column">
+                        <li class="title">Computer Score</li>
+                        <li>Win: <span id="yourWin"></span></li>
+                        <li>Lose: <span id="yourLose"></span></li>
+                        <li>Draw: <span id="yourDraw"></span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <button id="listBtn">
+                <svg class="btn-list" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="list-alt" class="svg-inline--fa fa-list-alt fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h416c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zM128 120c-22.091 0-40 17.909-40 40s17.909 40 40 40 40-17.909 40-40-17.909-40-40-40zm0 96c-22.091 0-40 17.909-40 40s17.909 40 40 40 40-17.909 40-40-17.909-40-40-40zm0 96c-22.091 0-40 17.909-40 40s17.909 40 40 40 40-17.909 40-40-17.909-40-40-40zm288-136v-32c0-6.627-5.373-12-12-12H204c-6.627 0-12 5.373-12 12v32c0 6.627 5.373 12 12 12h200c6.627 0 12-5.373 12-12zm0 96v-32c0-6.627-5.373-12-12-12H204c-6.627 0-12 5.373-12 12v32c0 6.627 5.373 12 12 12h200c6.627 0 12-5.373 12-12zm0 96v-32c0-6.627-5.373-12-12-12H204c-6.627 0-12 5.373-12 12v32c0 6.627 5.373 12 12 12h200c6.627 0 12-5.373 12-12z"></path></svg>
+                <svg class="btn-close" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times-circle" class="svg-inline--fa fa-times-circle fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"></path></svg>
+            </button>
             <button id="controlVolume">
                 <img src="img/volume-up-solid.svg" alt="volue">
             </button>
+
             <div class="container-main">
                 <div class="column">
                     <div class="img-block left">
